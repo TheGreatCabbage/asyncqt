@@ -267,6 +267,7 @@ class _QEventLoop:
 
         assert self.__app is not None
 
+        asyncio.events._set_running_loop(self)
         super().__init__()
 
     def run_forever(self):
